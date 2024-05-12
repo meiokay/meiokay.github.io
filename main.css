@@ -32,7 +32,7 @@ body {
   text-align: center;
   top: 0;
   width: 100vw;
-  z-index: 999;
+  z-index: 1000;
   
   @media (min-width: 350px) {
     display: none;
@@ -184,6 +184,7 @@ body {
   > div {
     background-color: var(--primary-4);
     border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px inset;
     color: var(--white);
     padding: 8px 16px;
   }
@@ -243,6 +244,10 @@ body {
   overflow: scroll;
   padding: 16px;
 
+  @media (max-width: 600px) {
+    margin: 0 16px 16px;
+  }
+
   > header {
     background-color: var(--white);
     border-radius: 8px;
@@ -262,6 +267,7 @@ body {
     display: flex;
     gap: 16px;
     padding: 16px;
+    width: calc(100% - 32px);
 
     > .logo {
       align-items: center;
@@ -271,6 +277,10 @@ body {
       flex: 0 0 100px;
       height: 100px;
       justify-content: center;
+      
+      @media (max-width: 450px) {
+        display: none;
+      }
 
       > .rounded {
         border-radius: 8px;
@@ -281,10 +291,14 @@ body {
       display: flex;
       flex-direction: column;
       height: 100px;
+      min-width: 0;
 
       > .title {
         font-weight: 600;
         margin-bottom: 4px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
 
         > b {
           color: var(--primary-2);
