@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="main.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Three.js -->
+    <script src="three/three.js"></script>
+    <script src="three/MTLLoader.js"></script>
+    <script src="three/OBJLoader.js"></script>
+    <script src="three/OrthographicCamera.js"></script>
+
+    <title>Mei Jin</title>
+  </head>
+
+  <body>
+    <canvas id="modelCanvas"></canvas>
+
+    <div class="cover-screen">
+      <div>Please visit this site on a bigger screen.</div>
+    </div>
+
+    <div class="header">
+      <div class="nav-container">
+        <nav id="nav-1">
+          <div>Writings</div>
+        </nav>
+      </div>
+      <div class="nav-container">
+        <nav id="nav-2">
+          <div>Resume</div>
+        </nav>
+      </div>
+      <div class="nav-container">
+        <nav id="nav-3">
+          <div>Experience</div>
+        </nav>
+      </div>
+      <div class="nav-container">
+        <nav id="nav-4">
+          <div>About Me</div>
+        </nav>
+      </div>
+      <div class="tab" id="tab-1">
+        <div class="file">
+          <div class="chevron">
+            <span id="chevron-1">⌃</span>
+          </div>
+          <div class="writings">
+            <div>Under construction. Come back later?</div>
+          </div>
+        </div>
+      </div>
+      <div class="tab" id="tab-2">
+        <div class="file">
+          <div class="chevron">
+            <span id="chevron-2">⌃</span>
+          </div>
+          <div class="resume">
+            <a href="resume.pdf" target="_blank">
+              <img src="assets/tape.png" height="150" />
+              Resume
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="tab" id="tab-3">
+        <div class="file">
+          <div class="chevron">
+            <span id="chevron-3">⌃</span>
+          </div>
+          <div class="experience">
+            <header>Internships</header>
+            <div class="section">
+              <div class="logo">
+                <img src="assets/kikoff.jpg" width="100" class="rounded" />
+              </div>
+              <div class="description">
+                <div class="title">
+                  Software Engineer Intern @ <b>Kikoff</b>
+                </div>
+                <div class="summary">
+                  Worked on owning projects end-to-end for boosting user
+                  engagement and streamlining credit dispute processes.
+                </div>
+                <div class="stack">
+                  <span>React</span>
+                  <span>Ruby on Rails</span>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="logo">
+                <img src="assets/geotab.jpg" width="100" class="rounded" />
+              </div>
+              <div class="description">
+                <div class="title">
+                  Software Developer Intern @ <b>GEOTAB</b>
+                </div>
+                <div class="summary">
+                  Worked on camera integrations and video telematics between
+                  partner cameras and Geotab devices.
+                </div>
+                <div class="stack">
+                  <span>React</span>
+                  <span>.NET</span>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="logo">
+                <img src="assets/textnow.webp" width="50" />
+              </div>
+              <div class="description">
+                <div class="title">
+                  Software Developer In Test Intern @ <b>TextNow</b>
+                </div>
+                <div class="summary">
+                  Worked on test automation initiatives with the XCUITest
+                  framework and continuous integration tools.
+                </div>
+                <div class="stack">
+                  <span>Swift</span>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="logo">
+                <img src="assets/evolv1.png" width="75" />
+              </div>
+              <div class="description">
+                <div class="title">
+                  Full-Stack Developer Intern @ <b>evolv1</b>
+                </div>
+                <div class="summary">
+                  Built an interactive website to display live data that
+                  demonstrate the environmental achievements of evolv1.
+                </div>
+                <div class="stack">
+                  <span>JavaScript</span>
+                  <span>Flask</span>
+                  <span>InfluxDB</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab" id="tab-4">
+        <div class="file">
+          <div class="chevron">
+            <span id="chevron-4">⌃</span>
+          </div>
+          <div class="about-me">
+            <div class="message">
+              <header>Hi!</header>
+              <p>
+                My name is Mei (pronounced “May”). I have a cat. Her name is
+                Julie (pronounced “Julie”).
+              </p>
+              <p>
+                I am a fourth-year student studying <b>Computer Science</b> at
+                the University of Waterloo and <b>Business Administration</b> at
+                Wilfrid Laurier University. A full-stack developer, but my
+                passion lies in front-end development.
+              </p>
+              <p>
+                I am always looking to get involved with new experiences and
+                opportunities. Feel free to reach me at
+                <b>frommeijin@gmail.com</b> for a nice chat.
+              </p>
+            </div>
+            <div class="images">
+              <div id="image-1">
+                <img src="assets/julie.jpg" width="180" height="240" />
+              </div>
+              <div id="image-2">
+                <img src="assets/mei.jpg" width="180" height="240" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="model.js"></script>
+  </body>
+</html>
